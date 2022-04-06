@@ -326,12 +326,38 @@
                 </li>
             </ul>
         </div>
+        <div class="footer-form-block">
+            <title class="footer-title">Подпишитесь на рассылку</title>
+            <form class="footer-form">
+                <input type="email" name="mail" placeholder="E-mail">
+                <button class="footer-form-btn">Подписаться
+                    <a class="footer-send-link" href="">
+                        <svg class="footer-send-svg" width="24" height="24" > <use href="/images/icons.svg#icon-icon-send" ></use></svg>
+                    </a>
+                </button>
+            </form>
+        </div>
         </div>
     </footer>
     <!--Модальное окно-->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal-wrapper">
             <button class="modal-btn" data-modal-close>x</button>
+            <form class="modal-form">
+                <title class="modal-title">Оставьте свои данные, мы вам перезвоним</title>
+                <div class="modal-item">
+                    <label for="">Имя</label>
+                    <input type="text">
+                </div>
+                <div class="modal-item">
+                    <label for="">Телефон</label>
+                    <input type="tel">
+                </div>
+                <div class="modal-item">
+                    <label for="">Почта</label>
+                    <input type="email">
+                </div>
+            </form>
             </div>
     </div>
 <script src="./js/modal.js"></script>
