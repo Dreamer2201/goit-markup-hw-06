@@ -601,12 +601,9 @@ address {
   cursor: pointer;
 }
 
-
-.footer-send-link {
-  padding: 13px auto;
-}
 .footer-send-svg {
   margin-left: 10px;
+  padding: 13px auto;
 }
 /* Portfolio page */
 .portfolio {
@@ -787,7 +784,15 @@ address {
   width: 30px;
   height: 30px;
   border-radius: 50%;
+
+  transition: fill var(--animation-function);
 }
+.modal-btn:focus,
+.modal-btn:hover {
+  cursor: pointer;
+  fill: var(--akcent-color-text);
+}
+
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -816,10 +821,17 @@ address {
 .modal-it-input {
   width: 100%;
   height: 40px;
-  border: 1px solid #2196F3;
+  border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-}
+  padding-left: 42px;
 
+  transition: border-color var(--animation-function);
+}
+.modal-it-input:focus,
+.modal-it-input:hover {
+  border-color: var(--akcent-color-text);
+  cursor: pointer;
+}
 .modal-item .comment-form-input {
   width: 100%;
   height: 120px;
@@ -828,12 +840,17 @@ address {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border-color var(--animation-function);
 }
+.modal-item textarea:focus,
+.modal-item textarea:hover {
+  border-color: var(--akcent-color-text);
+  cursor: pointer;
+}
+
 .modal-form .comment-form {
   margin-bottom: 20px;
-}
-.modal-form .checkbox {
-  margin-bottom: 30px;
 }
 .modal-form-btn {
   display: inline-block;
@@ -873,19 +890,43 @@ address {
 .icon-form {
   fill: var(--primary-light-text);
 }
-.modal-it-input:focus + .icon-form {
+.modal-it-input:focus + .icon-form,
+.modal-it-input:hover +.icon-form {
   background-color: var(--primary-dark-text);
   fill: var(--akcent-color-text);
 }
 
 .modal-item.checkbox {
+  position: relative;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  margin-bottom: 30px;
+  padding: 0;
 }
 .checkbox label {
   margin-left: 7px;
-
   line-height: 1.71;
   color: #757575;
+}
+.icon-check {
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  transform: translateY(-50%);
+  opacity: 1;
+}
+.icon-checkbox {
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+.checkbox-input:checked ~  .icon-check {
+  opacity: 0;
+}
+.checkbox-input:checked ~ .icon-checkbox {
+  opacity: 1;
 }
