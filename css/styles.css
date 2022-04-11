@@ -558,12 +558,24 @@ address {
   display: flex;
 }
 .footer-form input {
+  margin: 0;
+  padding: 15px 16px;
+
   width: 358px;
   background-color: inherit;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+  color: var(--primary-dark-text);
 }
-
+.footer-form input::placeholder {
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-form input:hover,
+.footer-form input:focus {
+  border-color: var(--akcent-color-text);
+  cursor: pointer;
+}
 .footer-form-btn {
   display: flex;
   justify-content: center;
@@ -588,17 +600,8 @@ address {
 .footer-form-btn:hover {
   cursor: pointer;
 }
-.footer-form input {
-  margin: 0;
-  padding: 15px 16px;
-  color: var(--primary-dark-text);
-}
-.footer-form input::placeholder {
-  font-family: "Roboto";
-  font-size: 16px;
-  line-height: 1.25;
-  color: rgba(255, 255, 255, 0.6);
-}
+
+
 .footer-send-link {
   padding: 13px auto;
 }
@@ -777,6 +780,10 @@ address {
   top: 8px;
   right: 8px;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -809,8 +816,7 @@ address {
 .modal-it-input {
   width: 100%;
   height: 40px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
+  border: 1px solid #2196F3;
   border-radius: 4px;
 }
 
