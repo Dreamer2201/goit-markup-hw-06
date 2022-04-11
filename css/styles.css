@@ -848,7 +848,6 @@ address {
   border-color: var(--akcent-color-text);
   cursor: pointer;
 }
-
 .modal-form .comment-form {
   margin-bottom: 20px;
 }
